@@ -16,7 +16,7 @@
     "@angular/platform-browser-dynamic": "2.0.1",
     "@angular/platform-server": "2.0.1",
     "@angular/router": "3.0.1",
-    "@angular/upgrade": "3.0.1",
+    "@angular/upgrade": "2.0.1",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.5.0",
@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "@types/core-js": "^0.9.42",
-    "@types/node": "^8.0.22"
+    "@types/node": "^8.0.22",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.0.0-rc.2"
   }
 }
