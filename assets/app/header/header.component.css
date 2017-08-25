@@ -1,0 +1,20 @@
+.header-list {
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	background-color: #555;
+	top:0;
+}
+
+li a {
+	display: block;
+	color:white;
+	text-align: center;
+	padding: 18px 22px;
+	float: right;
+	font-size: 10px;
+}
+
+li a:hover {
+	background-color: #111;
+}
