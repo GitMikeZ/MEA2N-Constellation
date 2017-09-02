@@ -26,7 +26,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'raw'
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
+            },
         ]
     },
 

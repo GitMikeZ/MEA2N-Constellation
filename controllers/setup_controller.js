@@ -4,59 +4,59 @@ module.exports = function(app) {
 	app.get('/api/setup', function(req, res) {
 		var startConstellations = [
 			{
+				username: 'John',
 				url: '/public/images/andromeda.png',
 				name: 'Andromeda',
-				user: 'John'
 			},
 			{
+				username: 'Sam',
 				url: '/public/images/aquarius.png',
 				name: 'Aquarius',
-				user: 'John'
 			},
 			{
+				username: 'Charles',
 				url: '/public/images/cancer.png',
 				name: 'Cancer',
-				user: 'John'
 			},
 			{
+				username: 'Tina',
 				url: '/public/images/cassiopeia.png',
 				name: 'Cassiopeia',
-				user: 'John'
 			},
 			{
+				username: 'Christie',
 				url: '/public/images/centarus.png',
 				name: 'Centarus',
-				user: 'John'
 			},
 			{
+				username: 'Thomas',
 				url: '/public/images/gemini.png',
 				name: 'Gemini',
-				user: 'John'
 			},
 			{
+				username: 'Carrel',
 				url: '/public/images/hydra.png',
 				name: 'Hydra',
-				user: 'John'
 			},
 			{
+				username: 'Michael',
 				url: '/public/images/leo.png',
 				name: 'Leo',
-				user: 'John'
 			},
 			{
+				username: 'Chloe',
 				url: '/public/images/scorpius.png',
 				name: 'Scorpius',
-				user: 'John'
 			},
 			{
+				username: 'Rachel',
 				url: '/public/images/tucana.png',
 				name: 'Tucana',
-				user: 'John'
 			},
 			{
+				username: 'Duncan',
 				url: '/public/images/virgo.png',
 				name: 'Virgo',
-				user: 'John'
 			},
 		];
 		constellations.create(startConstellations, function(err, results) {

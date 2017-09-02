@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
-import { Constellation } from './constellation.model';
-
 @Component({
 	selector: 'app-constellation',
-	templateUrl: './constellation.conponent.html',
+	templateUrl: './constellation.component.html',
 })
 
 export class ConstellationComponent {
