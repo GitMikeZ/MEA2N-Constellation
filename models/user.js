@@ -9,10 +9,10 @@ var userSchema = new Schema({
 	password: {type: String, required: true},
 	email: {type: String, required: true, unique: true},
 	constellations: [{type: Schema.Types.ObjectId, ref: "Constellation"}],
-	comments: [{types: Schema.Types.ObjectId, ref: "Comment"}],
+	comments: [{type: Schema.Types.ObjectId, ref: "Comment"}],
 });
 
-schema.plugin(mongooseUniqueValidator);
+userSchema.plugin(mongooseUniqueValidator);
 
 module.exports = mongoose.model("User", userSchema);
 

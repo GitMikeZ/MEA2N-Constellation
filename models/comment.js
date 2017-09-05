@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 
 var commentSchema = new Schema({
 	time: {type: Date},
-	comment: {type: String},
+	content: {type: String},
 	stars: {type: Number},
 	user: {type: Schema.Types.ObjectId, ref: "User"}
 })
 
-module.exports = mongoose.model('Comment', commentSchema);
+module.exports = mongoose.model("Comment", commentSchema);

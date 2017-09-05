@@ -8,4 +8,4 @@ var constellationSchema = new Schema({
 	user: {type: Schema.Types.ObjectId, ref: "User"}
 })
 
-module.exports = mongoose.model('Constellation', constellationSchema);
+module.exports = mongoose.model("Constellation", constellationSchema);

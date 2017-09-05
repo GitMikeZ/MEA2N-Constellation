@@ -1,16 +1,16 @@
 export class Constellation {
-	imagePath: string;
-	constellationName: string;
+	url: string;
+	name: string;
 	constellationId?: string;
 	userId?: string;
 
-	constructor(imagePath: string,
-							constellationName: string,
+	constructor(url: string,
+							name: string,
 							constellationId?: string,
 							userId?: string) {
 
-			this.imagePath = imagePath;
-			this.constellationName = constellationName;
+			this.url = url;
+			this.name = name;
 			this.constellationId = constellationId;
 			this.userId = userId;
 	}

@@ -1,20 +1,13 @@
-{
-	"firstName:": "John",
-	"lastName": "Doe",
-	"password": "password",
-	"email": "john@email.com",
-	"Constellations": [
-		{ "url": "/public/images/andromeda.png", "name": "Andromeda" },
-		{ "url": "/public/images/aquarius.png", "name": "Aquarius" },
-		{ "url": "/public/images/cancer.png", "name": "Cancer" },
-		{ "url": "/public/images/cassiopeia.png", "name": "Cassiopeia" },
-		{ "url": "/public/images/centarus.png", "name": "Centarus" },
-		{ "url": "/public/images/gemini.png", "name": "Gemini" },
-		{ "url": "/public/images/hydra.png", "name": "Hydra" },
-		{ "url": "/public/images/leo.png", "name": "Leo" },
-		{ "url": "/public/images/scorpius.png", "name": "Scorpius" },
-		{ "url": "/public/images/tucana.png", "name": "Tucana" },
-		{ "url": "/public/images/virgo.png", "name": "Virgo" }
-	],
-	"Comments": []
-}
+[
+	{ "url": "../public/images/andromeda.png", "name": "Andromeda" },
+	{ "url": "../public/images/aquarius.png", "name": "Aquarius" },
+	{ "url": "../public/images/cancer.png", "name": "Cancer" },
+	{ "url": "../public/images/cassiopeia.png", "name": "Cassiopeia" },
+	{ "url": "../public/images/centarus.png", "name": "Centarus" },
+	{ "url": "../public/images/gemini.png", "name": "Gemini" },
+	{ "url": "../public/images/hydra.png", "name": "Hydra" },
+	{ "url": "../public/images/leo.png", "name": "Leo" },
+	{ "url": "../public/images/scorpius.png", "name": "Scorpius" },
+	{ "url": "../public/images/tucana.png", "name": "Tucana" },
+	{ "url": "../public/images/virgo.png", "name": "Virgo" }
+]
