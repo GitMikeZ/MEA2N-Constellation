@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-
+	constellation = {
+		name: "Andromeda",
+		url: "images/andromeda.png"
+	}
 }

@@ -10,12 +10,7 @@ var seedData = require('../controllers/seed_data');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Constellation.find().exec({}, function(err, doc) {
-    if ( err ) {
-      return res.send('Error!');
-    }
-    res.render('index', {name: doc});
-  })
+  res.render("index");
 });
 
 module.exports = router;
