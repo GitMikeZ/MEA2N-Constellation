@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/user');
 
 var User = require('../models/user');
 var Constellation = require('../models/constellation');
@@ -11,6 +10,7 @@ var seedData = require('../controllers/seed_data');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render("index");
+  next();
 });
 
 module.exports = router;
@@ -39,5 +39,5 @@ router.post('/', function(req, res, next) {
   user.save();
   res.redirect('/')
 })
-
 */
+

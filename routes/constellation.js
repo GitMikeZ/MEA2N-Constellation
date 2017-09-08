@@ -1,10 +1,10 @@
-var express = reqire('express');
+var express = require('express');
 
 var router = express.Router();
 
-var Constellation = require('./models/constellations')
+var Constellation = require('../models/constellation')
 
-router.get('/constellations', function(res, req, next) {
+router.get('/', function(res, req, next) {
 		Constellation.find().exec({}, function(err, constellations) {
 			if( err ) {
 				return res.status(500).json({
@@ -16,4 +16,7 @@ router.get('/constellations', function(res, req, next) {
 					obj: constellations
 			})
 		})
+		next();
 })
+
+module.exports = router;

@@ -8,17 +8,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
-
-// var config = require('./config');
-// var setupController = require('./controllers/setup_controller');
-
-// var users = require('./routes/users');
+var constellationRoutes = require('./routes/constellation');
 
 var app = express();
-
 mongoose.connect('localhost:27017/node-constellation');
-
-// setupController(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,14 +30,14 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS, PATCH');
   next();
-})
+});
 
+app.use('/constellation', constellationRoutes);
 app.use('/', appRoutes);
-//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  res.render('index');
+  return res.render('index');
 });
 
 module.exports = app;

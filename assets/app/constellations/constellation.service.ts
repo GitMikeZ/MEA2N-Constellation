@@ -11,23 +11,20 @@ export class ConstellationService {
 
 		constructor(private http: Http) {}
 
-		getMessages() {
-			return this.http.get('http://localhost:3000/')
+		getConstellations() {
+			return this.http.get('http://localhost:3000/constellation')
 				.map((response: Response) => {
 						const constellations = response.json().obj;
 						let transformedConstellations: Constellation[] = [];
 						for( let constellation of constellations) {
 								transformedConstellations.push(new Constellation(
 									constellation.url,
-									constellation.name,
-									constellation._id,
-									constellation.user._id)
+									constellation.name)
 								);
 						}
 						this.constellations = transformedConstellations;
 						return transformedConstellations;
 				})
-				.catch((error: Response) => Observable.throw(error.json()))
-
+				.catch((error: Response) => Observable.throw(error.json()));
 		}
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Constellation } from './constellation.model';
 import { ConstellationService } from './constellation.service';
@@ -9,5 +9,7 @@ import { ConstellationService } from './constellation.service';
 })
 
 export class ConstellationComponent {
+	@Input() constellation: Constellation;
 
+	constructor(private constellationService: ConstellationService) {}
 }
