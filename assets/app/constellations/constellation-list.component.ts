@@ -8,8 +8,8 @@ import { ConstellationService } from "./constellation.service";
 	templateUrl: `
 		<div class="container">
 			<app-constellation
-						[constellation]="constellation"
-						*ngFor="let constellation of constellations">
+				[constellation]="constellation"
+				*ngFor="let constellation of constellations">
 			</app-constellation>
 		</div>
 	`
