@@ -12,13 +12,16 @@ import { ConstellationsComponent } from './constellations/constellations.compone
 
 import { routing } from './app.routing';
 
+import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
 		ConstellationComponent,
 		ConstellationListComponent,
-		ConstellationsComponent
+		ConstellationsComponent,
+		FooterComponent
 	],
 	imports: [
 		BrowserModule,

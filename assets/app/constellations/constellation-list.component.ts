@@ -6,10 +6,12 @@ import { ConstellationService } from "./constellation.service";
 @Component({
 	selector:'app-constellation-list',
 	templateUrl: `
+		<div class="container">
 			<app-constellation
 						[constellation]="constellation"
 						*ngFor="let constellation of constellations">
 			</app-constellation>
+		</div>
 	`
 })
 
@@ -22,7 +24,7 @@ export class ConstellationListComponent implements OnInit {
 	ngOnInit() {
 		this.constellationService.getConstellations().subscribe(
 			(constellations: Constellation[]) => {
-				this.constellations = constellations;
+					this.constellations = constellations;
 			}
 		);
 	}

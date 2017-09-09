@@ -1,10 +1,12 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
+<div class="col-md-4">
+	<div class="panel panel-default">
 		<div class="panel-heading">
-			{{ constellation.name }}
+			<div class="panel-title">
+				{{ constellation.name }}
+			</div>
 		</div>
-	</div>
-	<div class="panel-body">
-		<img [src]="constellation.url">
+		<div class="panel-body">
+			<img [src]="constellation.url">
+		</div>
 	</div>
 </div>

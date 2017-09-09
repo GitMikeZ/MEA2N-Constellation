@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
 	selector: 'app-constellations',
 	templateUrl: `
 		<div class="row">
-			<app-constellation-list></app-constellation-list>
+			<div class="col-md-10 col-offset-1">
+				<app-constellation-list></app-constellation-list>
+			</div>
 		</div>
 	`
 })
