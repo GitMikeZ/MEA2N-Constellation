@@ -8,12 +8,14 @@ var Comment = require('../models/comment');
 var seedData = require('../controllers/seed_data');
 
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render("index");
   next();
 });
 
 module.exports = router;
+
 
 /*
 router.post('/', function(req, res, next) {
