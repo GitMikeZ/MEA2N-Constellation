@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 import { AuthService } from "./auth.service";
 import { User } from "./user.model";
@@ -8,17 +8,16 @@ import { User } from "./user.model";
 	selector: 'app-signup',
 	templateUrl: './signup.component.html'
 })
-export class SignupComponent implements OnInit {
-
+export class SignupComponent {
 	myForm: FormGroup;
 
 	constructor(private authService: AuthService) {}
 
 	onSubmit() {
 		const user = new User(
-				this.myForm.value.email,
-				this.myForm.value.password,
-				this.myForm.value.username
+			this.myForm.value.username,
+			this.myForm.value.email,
+			this.myForm.value.password
 		);
 		this.authService.signup(user)
 				.subscribe(

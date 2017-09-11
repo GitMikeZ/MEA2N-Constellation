@@ -12,6 +12,9 @@ import { ConstellationService } from "./constellation.service";
 				*ngFor="let constellation of constellations">
 			</app-constellation>
 		</div>
+		<br>
+		<br>
+		<app-footer></app-footer>
 	`
 })
 
