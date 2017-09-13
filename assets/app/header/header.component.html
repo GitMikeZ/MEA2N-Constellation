@@ -2,8 +2,13 @@
 	<div class="container">
 		<ul class="header-list">
 			<li><h1 id="title">Modern Constellations</h1></li>
-			<li routerLinkActive="active"><a [routerLink]="['/login']">Signin</a></li>
-			<li><a href="#Description">Description</a></li>
+			<div *ngIf="!isLoggedIn()">
+				<li routerLinkActive="active"><a [routerLink]="['/login']">Signin</a></li>
+			</div>
+			<div *ngIf="isLoggedIn()">
+					<li><a>Welcome!</a></li>
+				<li (click)="onLogout()"><a [routerLink]="['/constellations']">Logout</a></li>
+			</div>
 			<li routerLinkActive="active"><a [routerLink]="['/constellations']">StarMaps</a></li>
 		</ul>
 	</div>

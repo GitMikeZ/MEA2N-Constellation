@@ -16,29 +16,3 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-/*
-router.post('/', function(req, res, next) {
-  var email = req.body.email;
-  var user = new User({
-    firstName: 'John',
-    lastName: 'Doe',
-    password: 'password',
-    email: email,
-    constellations: [],
-    comments: []
-  });
-
-  seedData.forEach(function(item) {
-    var constellation = new Constellation({
-      user: user,
-      name: item.name,
-      url: item.url
-    });
-    constellation.save();
-  });
-
-  user.save();
-  res.redirect('/')
-})
-*/
-

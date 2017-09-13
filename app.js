@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var constellationRoutes = require('./routes/constellation');
-var userRoutes = require('./routes/user');
+var loginRoutes = require('./routes/login');
 
 var app = express();
 mongoose.connect('localhost:27017/node-constellation');
@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/constellation', constellationRoutes);
-app.use('/user', userRoutes);
+app.use('/login', loginRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
