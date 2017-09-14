@@ -10,9 +10,12 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var constellationRoutes = require('./routes/constellation');
 var loginRoutes = require('./routes/login');
+var commentRoutes = require('./routes/comment');
 
 var app = express();
-mongoose.connect('localhost:27017/node-constellation');
+var config = require('./config');
+
+mongoose.connect(config.getDbConnectionString());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,6 +36,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use('/comment', commentRoutes);
 app.use('/constellation', constellationRoutes);
 app.use('/login', loginRoutes);
 app.use('/', appRoutes);

@@ -19,6 +19,11 @@ import { SigninComponent } from './login/signin.component';
 import { SignupComponent } from './login/signup.component';
 import { LoginService } from './login/login.service';
 
+import { CommentComponent } from './comments/comment.component';
+import { CommentInputComponent } from './comments/comment-input.component';
+import { CommentListComponent } from './comments/comment-list.component';
+import { CommentsComponent } from './comments/comments.component';
+
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -31,6 +36,10 @@ import { FooterComponent } from './footer/footer.component';
 		LoginComponent,
 		SigninComponent,
 		SignupComponent,
+		CommentComponent,
+		CommentsComponent,
+		CommentInputComponent,
+		CommentListComponent,
 		FooterComponent
 	],
 	imports: [
