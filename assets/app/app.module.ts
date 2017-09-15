@@ -23,6 +23,7 @@ import { CommentComponent } from './comments/comment.component';
 import { CommentInputComponent } from './comments/comment-input.component';
 import { CommentListComponent } from './comments/comment-list.component';
 import { CommentsComponent } from './comments/comments.component';
+import { CommentService } from './comments/comment.service';
 
 import { FooterComponent } from './footer/footer.component';
 
@@ -51,7 +52,8 @@ import { FooterComponent } from './footer/footer.component';
 		routing
 	],
 	providers: [
-		LoginService
+		LoginService,
+		CommentService
 	],
 	bootstrap: [AppComponent]
 })

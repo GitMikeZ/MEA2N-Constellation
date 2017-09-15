@@ -15,7 +15,7 @@ var commentRoutes = require('./routes/comment');
 var app = express();
 var config = require('./config');
 
-mongoose.connect(config.getDbConnectionString());
+mongoose.connect('localhost:27017/node-constellation');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

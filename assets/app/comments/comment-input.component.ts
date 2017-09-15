@@ -12,8 +12,8 @@ export class CommentInputComponent {
 
 	constructor(private commentService: CommentService ){}
 
-	onSubmit(form: NgForm) {
+	// onSubmit(form: NgForm) {
 		// const comment = new Comment(form.value.content, 'Max');
 		//this.commentService.addComment(comment);
-	}
+	//}
 }
