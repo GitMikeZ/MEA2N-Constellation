@@ -1,12 +1,13 @@
-<form>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
 	<div class="form-group">
 		<label for="content">Comments</label>
 		<input
 						type="text"
 						id="content"
 						class="form-control"
-						name="conent"
+						[ngModel]="message?.content"
+						name="content"
 						required>
 	</div>
-	<button class="btn btn-primary" type=submit>Post Comment</button>
+	<button class="btn btn-primary" type="submit">Post Comment</button>
 </form>

@@ -18,10 +18,10 @@ export class CommentListComponent implements OnInit {
 
 	ngOnInit() {
 		this.commentService.getComments()
-				.subscribe(
-					(comments: Comment[]) => {
-						this.comments = comments;
-					}
-				)
+			.subscribe(
+				(comments: Comment[]) => {
+					this.comments = comments;
+				}
+			);
 	}
 }

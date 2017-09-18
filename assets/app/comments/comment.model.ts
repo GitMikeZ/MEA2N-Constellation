@@ -1,12 +1,19 @@
 export class Comment {
-	time: Date;
 	content: string;
-	commentId: string;
-	userId: string;
+	username: string;
+	date: string;
+	commentId?: string;
+	userId?: string;
 
-	constructor(time: Date, content: string, commentId: string, userId: string) {
-		this.time = time;
+	constructor(content: string,
+							username: string,
+							date: string,
+							commentId?: string,
+							userId?: string) {
+
 		this.content = content;
+		this.username = username;
+		this.date = date;
 		this.commentId = commentId;
 		this.userId = userId;
 	}

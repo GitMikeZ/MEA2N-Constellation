@@ -22,8 +22,9 @@ export class CommentService {
 				.map((response: Response) => {
 					const result = response.json();
 					const comment = new Comment(
-						result.obj.date,
 						result.obj.content,
+						result.obj.user.username,
+						result.obj.date,
 						result.obj._id,
 						result.obj.user._id);
 						this.comments.push(comment);
@@ -40,6 +41,7 @@ export class CommentService {
 				for( let comment of comments ) {
 					transformedComments.push(new Comment(
 						comment.content,
+						comment.user.username,
 						comment.date,
 						comment._id,
 						comment.user._id)

@@ -1,29 +1,30 @@
 var express = require('express');
 var router = express.Router();
 var jwt = require('jsonwebtoken');
+var mongoose = require('mongoose');
 
 var User = require('../models/user');
 var Comment = require('../models/comment');
 
 router.get('/', function(req, res, next) {
 	Comment.find()
-			.populate('user', 'username')
-			.exec(function(err, comments) {
-				if( err ) {
-					return res.status(500).json({
-							title: 'An error occured',
-							error: err
-					});
-				}
-				res.status(200).json({
-						message: 'Success',
-						obj: comments
-				})
+		.populate('user', 'username')
+		.exec(function(err, comments) {
+			if( err ) {
+				return res.status(500).json({
+						title: 'An error occured',
+						error: err
+				});
+			}
+			res.status(200).json({
+					message: 'Success',
+					obj: comments
 			})
+		})
 })
 
 router.use('/', function(req, res, next) {
-	jwt.verify(req.verify.token, 'secret', function(err, decoded){
+	jwt.verify(req.query.token, 'secret', function(err, decoded){
 		if( err ) {
 			return res.status(401).json({
 				title: 'Not Authenticated',
@@ -35,7 +36,7 @@ router.use('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	var decoded = jwt.decoded(req.query.token);
+	var decoded = jwt.decode(req.query.token);
 	User.findById(decoded.user._id, function(err, user) {
 		if(err) {
 			return res.status(500).json({
@@ -43,9 +44,12 @@ router.post('/', function(req, res, next) {
 				error: err
 			});
 		}
+		var date = new Date();
+		var dat = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
 		var comment = new Comment({
 			content: req.body.content,
-			user: user
+			user: user,
+			date: dat
 		});
 		comment.save(function(err, result) {
 			if( err ) {
@@ -54,7 +58,7 @@ router.post('/', function(req, res, next) {
 					error: err
 				});
 			}
-			user.comments.push(result);
+			user.comments.push(mongoose.Types.ObjectId(result._id));
 			user.save();
 			res.status(201).json({
 				message: 'Saved message',
