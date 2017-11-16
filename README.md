@@ -1,6 +1,10 @@
 # Nodejs-Constellation
 
-App displays constellation star maps with authentication and authorization using JWT where users can create an account and leave comments and thoughts about the stars.
+App displays constellation star maps with authentication and authorization using JWT where users can create an account and leave their comments and thoughts about the stars. The app was built using various JavaScript packages including Webpack, Body-parser, rxjs, and others which you can find in the packages.json file.
+
+## Run
+
+To view the app, download node.js and change directory to the project folder and run npm install. 
 
 ## Project Images
 
