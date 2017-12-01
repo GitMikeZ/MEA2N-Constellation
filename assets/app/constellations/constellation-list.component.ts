@@ -5,7 +5,7 @@ import { ConstellationService } from "./constellation.service";
 
 @Component({
 	selector:'app-constellation-list',
-	templateUrl: `
+	template: `
 		<div class="container">
 			<app-constellation
 				[constellation]="constellation"

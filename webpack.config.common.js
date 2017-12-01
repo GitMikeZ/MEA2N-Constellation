@@ -10,35 +10,21 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            {
-                test: /\.ts$/,
-                loaders: [
-                    'awesome-typescript-loader',
-                    'angular2-template-loader',
-                    'angular2-router-loader'
-                ]
-            },
+        rules: [
             {
                 test: /\.html$/,
-                loader: 'html'
+                use: [{ loader: 'html-loader' }]
             },
             {
                 test: /\.css$/,
-                loader: 'raw'
+                use: [{ loader: 'raw-loader' }]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/,
-                loader: 'file-loader?name=assets/[name].[hash].[ext]'
-            },
-        ]
-    },
+                use: [{ loader: 'file-loader'}]
+            }
+        ],
+        exprContextCritical: false
 
-    plugins: [
-        new webpack.ContextReplacementPlugin(
-            // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-            './src' // location of your src
-        )
-    ]
+    }
 };

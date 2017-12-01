@@ -12,7 +12,7 @@ export class LoginService {
 		signup(user: User) {
 			const body = JSON.stringify(user);
 			const headers = new Headers({'Content-Type': 'application/json'});
-			return this.http.post('http://localhost:3000/login', body, {headers: headers})
+			return this.http.post('http://constellations-env.icamfpwgk9.ca-central-1.elasticbeanstalk.com/login', body, {headers: headers})
 						.map((response: Response) => response.json())
 						.catch((error: Response) => Observable.throw(error.json()));
 		}
@@ -20,7 +20,7 @@ export class LoginService {
 		signin(user: User) {
 			const body = JSON.stringify(user);
 			const headers = new Headers({'Content-Type': 'application/json'});
-			return this.http.post('http://localhost:3000/login/signin', body, {headers: headers})
+			return this.http.post('http://constellations-env.icamfpwgk9.ca-central-1.elasticbeanstalk.com/login/signin', body, {headers: headers})
 						.map((response: Response) => response.json())
 						.catch((error: Response) => Observable.throw(error.json()));
 		}

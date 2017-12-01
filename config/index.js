@@ -4,6 +4,6 @@ module.exports = {
 
 	getDbConnectionString: function() {
 		return 'mongodb://' + configValues.uname +
-			':' + configValues.pwd + '@ds035750.mlab.com:35750/constellations';
+			':' + configValues.pwd + '@ds133814.mlab.com:33814/node-constellation';
 	}
 }

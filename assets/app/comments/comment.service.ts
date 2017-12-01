@@ -18,7 +18,7 @@ export class CommentService {
 		const token = localStorage.getItem('token')
 			? '?token=' + localStorage.getItem('token')
 			: '';
-		return this.http.post('http://localhost:3000/comment' + token, body, {headers: headers})
+		return this.http.post('http://constellations-env.icamfpwgk9.ca-central-1.elasticbeanstalk.com/comment' + token, body, {headers: headers})
 				.map((response: Response) => {
 					const result = response.json();
 					const comment = new Comment(
@@ -34,7 +34,7 @@ export class CommentService {
 	}
 
 	getComments() {
-		return this.http.get('http://localhost:3000/comment')
+		return this.http.get('http://constellations-env.icamfpwgk9.ca-central-1.elasticbeanstalk.com/comment')
 			.map((response: Response) => {
 				const comments = response.json().obj;
 				let transformedComments: Comment[] = [];

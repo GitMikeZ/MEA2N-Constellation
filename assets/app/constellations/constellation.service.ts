@@ -12,7 +12,7 @@ export class ConstellationService {
 		constructor(private http: Http) {}
 
 		getConstellations() {
-			return this.http.get('http://localhost:3000/constellation')
+			return this.http.get('http://constellations-env.icamfpwgk9.ca-central-1.elasticbeanstalk.com/constellation')
 				.map((response: Response) => {
 					const constellations = response.json().obj;
 					let transformedConstellations: Constellation[] = [];

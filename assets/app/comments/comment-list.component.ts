@@ -5,7 +5,7 @@ import { CommentService } from './comment.service';
 
 @Component({
 	selector: 'app-comment-list',
-	templateUrl: `
+	template: `
 			<app-comment
 					[comment]="comment"
 					*ngFor="let comment of comments"></app-comment>
